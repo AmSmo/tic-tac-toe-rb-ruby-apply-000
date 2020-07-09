@@ -51,6 +51,7 @@ WIN_COMBINATIONS = [
   
   # alternates who goes, also makes sure that we don't double display board on first call (see turn)
   # also checks to see if it is either X or O, ideally will number spaces in board for easier gameplay
+  
   def turn_count(board)
     count = 0
     board.each do |square|
@@ -121,7 +122,7 @@ WIN_COMBINATIONS = [
     end
   end
   
-  # keeps playing until someone wins, if won middle of turn breaks out of the loop, the unitl is a catchall
+  # keeps playing until someone wins, if won middle of turn breaks out of the loop, the until is a catchall
   def play(board)
     until over?(board)
       turn(board)
